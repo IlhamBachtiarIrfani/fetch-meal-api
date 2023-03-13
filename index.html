@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<title>Page Title</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.css"
+			integrity="sha512-6HEJkWR1zijwiB3XwQE9eHjDBJmA/Fcl88LlxMba1EC1kakrlXOA14rJmQujhDkTQ6/TSXmGo0w57GbnZ2FSdQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<!-- ===== HEADER ===== -->
+		<header class="bg-white">
+			<nav
+				class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+				aria-label="Global">
+				<!-- ===== HEADER LOGO ===== -->
+				<div class="flex gap-3 items-center">
+					<img src="assets/img/logo.svg" />
+					<p class="font-bold text-2xl">Foodies</p>
+				</div>
+
+				<!-- ===== HEADER NAVIGATION ===== -->
+
+				<button class="block md:hidden">
+					<img src="assets/img/menu.svg" />
+				</button>
+				<div class="hidden md:flex items-center gap-10">
+					<a
+						href="#"
+						class="font-semibold leading-6 text-orange-500"
+						>Home</a
+					>
+					<a
+						href="#"
+						class="leading-6 text-gray-500"
+						>Ingredient</a
+					>
+					<a
+						href="#"
+						class="leading-6 text-gray-500"
+						>Categories</a
+					>
+					<a
+						href="#"
+						class="leading-6 text-gray-500"
+						>Area</a
+					>
+
+					<a
+						href="#"
+						class="bg-orange-500 font-semibold text-white px-5 py-2 rounded-full"
+						>Get Started</a
+					>
+				</div>
+			</nav>
+		</header>
+
+		<!-- ===== HERO SECTION ===== -->
+
+		<section
+			class="mx-auto max-w-7xl px-6 py-10 lg:py-20 lg:px-8 flex flex-wrap-reverse lg:flex-nowrap gap-10 lg:gap-20 items-center">
+			<div class="w-full lg:w-6/12 xl:w-5/12">
+				<h1 class="text-4xl font-bold lg:max-w-sm">
+					Eat What You Cook With Us, Together!
+				</h1>
+				<p class="mt-3 text-gray-500 text-lg lg:max-w-sm">
+					When you eat something that cooked by yourself, the
+					happiness is priceless
+				</p>
+
+				<form
+					method="get"
+					action="search.html"
+					class="flex rounded-full overflow-hidden lg:max-w-sm mt-5 border">
+					<input
+						class="w-full border-none px-5"
+						placeholder="Search any food..."
+						type="search" name="keyword" />
+					<button
+						class="flex flex-none gap-1 bg-orange-500 font-semibold text-white px-5 py-2">
+						<img src="assets/img/search.svg" />
+						Search
+					</button>
+				</form>
+			</div>
+
+			<div class="w-full lg:w-6/12 xl:w-7/12">
+				<img class="w-full aspect-video bg-black" />
+			</div>
+		</section>
+
+		<section class="bg-gray-100 p-6">
+			<div class="mx-auto max-w-7xl p-6 lg:px-8">
+				<p class="text-gray-500 text-center">Pick Now</p>
+				<h1 class="text-3xl font-bold text-center">
+					Categories to Try
+				</h1>
+				<div
+					class="swiper mt-7"
+					id="category-swiper">
+					<div class="swiper-wrapper">
+						<!-- ITEM -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-gray-100 p-6 mt-20">
+			<div class="mx-auto max-w-7xl p-6 lg:px-8">
+				<p class="text-gray-500 text-center">Pick Now</p>
+				<h1 class="text-3xl font-bold text-center">
+					Ingredient to Try
+				</h1>
+				<div
+					class="swiper"
+					id="ingredient-swiper">
+					<div class="swiper-wrapper">
+						<!-- ITEM -->
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio,line-clamp"></script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"
+		integrity="sha512-sR63/L3Slqn0OWMMafv7gmRGxkYJOcfgdN3jznwea9NYiett6R+cGdZ0t0TRHeH1gZogMyLE1oQpQ0Lc6ULKbg=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/index.js"></script>
+</html>

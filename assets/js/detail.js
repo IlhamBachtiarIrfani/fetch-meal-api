@@ -1,0 +1,41 @@
+const urlSearchParams = new URLSearchParams(window.location.search);
+const id = urlSearchParams.get('id');
+
+function ingredientItem(img, name, measure) {
+	return `<tr>
+        <td class="p-5 flex gap-3 items-center">
+            <img class="w-10" src="${img}" />
+            <span>${name}</span>
+        </td>
+        <td class="p-5">${measure}</td>
+    </tr>`;
+}
+
+async function loadData() {
+	const response = await fetch(
+		'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id
+	);
+	const data = await response.json();
+
+	const currentData = data.meals[0];
+
+	document.getElementById('recipe-name').innerHTML = currentData.strMeal;
+	document.getElementById('category').innerHTML = currentData.strCategory;
+	document.getElementById('area').innerHTML = currentData.strArea;
+	document.getElementById('img-thumbnail').src = currentData.strMealThumb;
+	document.getElementById('img-bg').src = currentData.strMealThumb;
+	document.getElementById('instruction').innerHTML =
+		currentData.strInstructions;
+
+	const ingredientContainer = document.getElementById('ingredient');
+	for (let index = 1; index <= 20; index++) {
+		const name = currentData['strIngredient' + index];
+		const measure = currentData['strMeasure' + index];
+
+        if (!name || !measure) continue;
+
+		ingredientContainer.innerHTML += ingredientItem(`https://www.themealdb.com/images/ingredients/${name}-Small.png`, name, measure);
+	}
+}
+
+loadData();

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<title>Page Title</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.css"
+			integrity="sha512-6HEJkWR1zijwiB3XwQE9eHjDBJmA/Fcl88LlxMba1EC1kakrlXOA14rJmQujhDkTQ6/TSXmGo0w57GbnZ2FSdQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+	</head>
+	<body class="bg-gray-100">
+		<section class="bg-orange-500 p-6">
+			<div class="mx-auto max-w-7xl p-20">
+				<form
+					method="get"
+					action=""
+					class="flex rounded-full overflow-hidden mx-auto max-w-lg mt-5">
+					<input
+						id="search-input"
+						class="w-full border-none px-5"
+						placeholder="Search any food..."
+						type="search"
+						name="keyword" />
+					<button
+						class="flex flex-none gap-1 bg-orange-900 font-semibold text-white px-5 py-2 items-center">
+						<img src="assets/img/search.svg" />
+						Search
+					</button>
+				</form>
+			</div>
+		</section>
+
+		<section
+			class="mx-auto max-w-7xl p-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
+			id="search-container">
+			<!-- ITEM -->
+		</section>
+	</body>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio,line-clamp"></script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"
+		integrity="sha512-sR63/L3Slqn0OWMMafv7gmRGxkYJOcfgdN3jznwea9NYiett6R+cGdZ0t0TRHeH1gZogMyLE1oQpQ0Lc6ULKbg=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/search.js"></script>
+</html>

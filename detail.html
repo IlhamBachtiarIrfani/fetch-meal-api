@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<title>Page Title</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.css"
+			integrity="sha512-6HEJkWR1zijwiB3XwQE9eHjDBJmA/Fcl88LlxMba1EC1kakrlXOA14rJmQujhDkTQ6/TSXmGo0w57GbnZ2FSdQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<section class="relative overflow-hidden">
+			<div class="absolute -inset-10 -z-10 bg-black">
+				<img
+					class="w-full h-full object-cover blur-xl opacity-40"
+					id="img-bg" />
+			</div>
+			<div
+				class="mx-auto max-w-7xl px-6 lg:px-8 py-32 text-white flex gap-10 items-center">
+				<img
+					class="w-52 rounded-2xl"
+					id="img-thumbnail" />
+				<div>
+					<h1
+						class="text-5xl font-bold"
+						id="recipe-name">
+						Recipe Name
+					</h1>
+					<p class="mt-2">
+						<span id="category">Category</span> -
+						<span id="area">Area</span>
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="mx-auto max-w-7xl px-6 lg:px-8 py-10 flex gap-10">
+			<div class="w-4/12">
+				<h2 class="text-2xl font-bold mt-10">Ingredient</h2>
+				<table
+					class="mt-3 table-auto w-full border"
+					id="ingredient"></table>
+			</div>
+
+			<div class="w-8/12">
+				<h2 class="text-2xl font-bold mt-10">Instruction</h2>
+				<div class="w-full mt-3">
+					<pre
+						class="whitespace-pre-wrap font-sans"
+						id="instruction">
+Lorem ipsum</pre
+					>
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio,line-clamp"></script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"
+		integrity="sha512-sR63/L3Slqn0OWMMafv7gmRGxkYJOcfgdN3jznwea9NYiett6R+cGdZ0t0TRHeH1gZogMyLE1oQpQ0Lc6ULKbg=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/detail.js"></script>
+</html>
