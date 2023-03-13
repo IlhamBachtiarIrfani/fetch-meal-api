@@ -47,6 +47,7 @@ function recipeItem(item) {
 }
 
 async function loadList(keyword) {
+	if (!keyword) keyword = "";
 	const response = await fetch(
 		'https://www.themealdb.com/api/json/v1/1/search.php?s=' + keyword
 	);
@@ -54,7 +55,7 @@ async function loadList(keyword) {
 
 	const container = document.getElementById('search-container');
 	container.innerHTML = '';
-	ingredients.meals.slice(0, 50).forEach((element) => {
+	ingredients?.meals?.slice(0, 50).forEach((element) => {
 		container.innerHTML += recipeItem(element);
 	});
 }
