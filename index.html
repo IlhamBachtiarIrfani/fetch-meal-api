@@ -26,12 +26,18 @@
 			integrity="sha512-6HEJkWR1zijwiB3XwQE9eHjDBJmA/Fcl88LlxMba1EC1kakrlXOA14rJmQujhDkTQ6/TSXmGo0w57GbnZ2FSdQ=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			media="screen"
+			href="assets/css/style.css" />
 	</head>
 	<body>
 		<!-- ===== HEADER ===== -->
-		<header class="bg-white">
+		<header class="sticky top-0 bg-white z-50">
 			<nav
-				class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+				class="relative mx-auto flex max-w-7xl items-center justify-between p-6"
 				aria-label="Global">
 				<!-- ===== HEADER LOGO ===== -->
 				<div class="flex gap-3 items-center">
@@ -41,35 +47,33 @@
 
 				<!-- ===== HEADER NAVIGATION ===== -->
 
-				<button class="block md:hidden">
+				<button
+					id="hamburger-btn"
+					class="block md:hidden">
 					<img src="assets/img/menu.svg" />
 				</button>
-				<div class="hidden md:flex items-center gap-10">
+				<div
+					id="header"
+					class="header">
 					<a
-						href="#"
+						href="index.html"
 						class="font-semibold leading-6 text-orange-500"
 						>Home</a
 					>
 					<a
-						href="#"
-						class="leading-6 text-gray-500"
-						>Ingredient</a
-					>
-					<a
-						href="#"
+						href="index.html#category"
 						class="leading-6 text-gray-500"
 						>Categories</a
 					>
 					<a
-						href="#"
+						href="index.html#ingredient"
 						class="leading-6 text-gray-500"
-						>Area</a
+						>Ingredient</a
 					>
-
 					<a
-						href="#"
+						href="search.html"
 						class="bg-orange-500 font-semibold text-white px-5 py-2 rounded-full"
-						>Get Started</a
+						>Find Recipes</a
 					>
 				</div>
 			</nav>
@@ -95,7 +99,8 @@
 					<input
 						class="w-full border-none px-5"
 						placeholder="Search any food..."
-						type="search" name="keyword" />
+						type="search"
+						name="keyword" />
 					<button
 						class="flex flex-none gap-1 bg-orange-500 font-semibold text-white px-5 py-2">
 						<img src="assets/img/search.svg" />
@@ -109,7 +114,9 @@
 			</div>
 		</section>
 
-		<section class="bg-gray-100 p-6">
+		<section
+			id="category"
+			class="bg-gray-100 p-6">
 			<div class="mx-auto max-w-7xl p-6 lg:px-8">
 				<p class="text-gray-500 text-center">Pick Now</p>
 				<h1 class="text-3xl font-bold text-center">
@@ -125,7 +132,7 @@
 			</div>
 		</section>
 
-		<section class="bg-gray-100 p-6 mt-20">
+		<section id="ingredient" class="bg-gray-100 p-6 mt-20">
 			<div class="mx-auto max-w-7xl p-6 lg:px-8">
 				<p class="text-gray-500 text-center">Pick Now</p>
 				<h1 class="text-3xl font-bold text-center">

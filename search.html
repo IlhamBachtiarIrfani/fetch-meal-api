@@ -26,8 +26,59 @@
 			integrity="sha512-6HEJkWR1zijwiB3XwQE9eHjDBJmA/Fcl88LlxMba1EC1kakrlXOA14rJmQujhDkTQ6/TSXmGo0w57GbnZ2FSdQ=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			media="screen"
+			href="assets/css/style.css" />
 	</head>
 	<body class="bg-gray-100">
+		<!-- ===== HEADER ===== -->
+		<header class="sticky top-0 bg-white z-50">
+			<nav
+				class="relative mx-auto flex max-w-7xl items-center justify-between p-6"
+				aria-label="Global">
+				<!-- ===== HEADER LOGO ===== -->
+				<div class="flex gap-3 items-center">
+					<img src="assets/img/logo.svg" />
+					<p class="font-bold text-2xl">Foodies</p>
+				</div>
+
+				<!-- ===== HEADER NAVIGATION ===== -->
+
+				<button
+					id="hamburger-btn"
+					class="block md:hidden">
+					<img src="assets/img/menu.svg" />
+				</button>
+				<div
+					id="header"
+					class="header">
+					<a
+						href="index.html"
+						class="font-semibold leading-6 text-gray-500"
+						>Home</a
+					>
+					<a
+						href="index.html#category"
+						class="leading-6 text-gray-500"
+						>Categories</a
+					>
+					<a
+						href="index.html#ingredient"
+						class="leading-6 text-gray-500"
+						>Ingredient</a
+					>
+					<a
+						href="search.html"
+						class="bg-orange-500 font-semibold text-white px-5 py-2 rounded-full"
+						>Find Recipes</a
+					>
+				</div>
+			</nav>
+		</header>
+
 		<section class="bg-orange-500 p-6">
 			<div class="mx-auto max-w-7xl p-20">
 				<form

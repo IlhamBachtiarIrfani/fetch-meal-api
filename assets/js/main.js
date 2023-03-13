@@ -5,3 +5,8 @@ tailwind.config = {
 		},
 	},
 };
+
+document.getElementById('hamburger-btn').addEventListener('click', function () {
+	console.log("halo");
+	document.getElementById('header').classList.toggle('active');
+});

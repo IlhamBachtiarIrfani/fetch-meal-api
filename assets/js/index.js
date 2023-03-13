@@ -33,11 +33,11 @@ function ingredientItem(img, name) {
 }
 
 async function loadCategories() {
-	const swiper = new Swiper('#category-swiper', {
+	const swiperCategory = new Swiper('#category-swiper', {
 		autoplay: {
 			delay: 3000,
 		},
-		slidesPerView: 2,
+		slidesPerView: 1,
 		spaceBetween: 20,
 		breakpoints: {
 			640: {
@@ -58,7 +58,7 @@ async function loadCategories() {
 	const categories = await response.json();
 
 	categories.categories.forEach((element) => {
-		swiper.appendSlide(
+		swiperCategory.appendSlide(
 			categoryItem(
 				element.strCategoryThumb,
 				element.strCategory,
@@ -69,7 +69,7 @@ async function loadCategories() {
 }
 
 async function loadIngredient() {
-	const swiper = new Swiper('#ingredient-swiper', {
+	const swiperIngredient = new Swiper('#ingredient-swiper', {
 		autoplay: {
 			delay: 3000,
 		},
@@ -93,8 +93,8 @@ async function loadIngredient() {
 	);
 	const ingredients = await response.json();
 
-	ingredients.meals.slice(0,14).forEach((element) => {
-		swiper.appendSlide(
+	ingredients.meals.slice(0,20).forEach((element) => {
+		swiperIngredient.appendSlide(
 			ingredientItem(
 				`https://www.themealdb.com/images/ingredients/${element.strIngredient}-Small.png`,
 				element.strIngredient,
