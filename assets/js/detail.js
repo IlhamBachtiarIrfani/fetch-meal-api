@@ -27,15 +27,31 @@ async function loadData() {
 	document.getElementById('instruction').innerHTML =
 		currentData.strInstructions;
 
+	document.getElementById(
+		'yt-video'
+	).src = `https://www.youtube.com/embed/${getId(currentData.strYoutube)}`;
+
 	const ingredientContainer = document.getElementById('ingredient');
 	for (let index = 1; index <= 20; index++) {
 		const name = currentData['strIngredient' + index];
 		const measure = currentData['strMeasure' + index];
 
-        if (!name || !measure) continue;
+		if (!name || !measure) continue;
 
-		ingredientContainer.innerHTML += ingredientItem(`https://www.themealdb.com/images/ingredients/${name}-Small.png`, name, measure);
+		ingredientContainer.innerHTML += ingredientItem(
+			`https://www.themealdb.com/images/ingredients/${name}-Small.png`,
+			name,
+			measure
+		);
 	}
+}
+
+function getId(url) {
+	const regExp =
+		/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+	const match = url.match(regExp);
+
+	return match && match[2].length === 11 ? match[2] : null;
 }
 
 loadData();
